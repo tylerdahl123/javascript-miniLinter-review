@@ -22,6 +22,25 @@ for (word of storyWords) {
     else if(word ==="very"){
         veryCount +=1
     }else if (word ==="basically"){
-        basciallyCount +=1
+        basicallyCount +=1
     }
 }
+
+let sentenceCount = 0;
+
+storyWords.forEach(word=> {
+   if (word[word.length-1]==='.' || word[word.length-1] ==='!'){
+       sentenceCount+=1;
+   }
+})
+
+console.log('sentence count', sentenceCount);
+
+
+
+
+
+console.log("really count", reallyCount);
+console.log("very count", veryCount);
+console.log("bascially count", basicallyCount);
+console.log(betterWords.join(' '));
